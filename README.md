@@ -1,35 +1,31 @@
-# singlepage-portfolio
+# My Portfolio in Vue 3
 
-This template should help get you started developing with Vue 3 in Vite.
+A project utilizing Vue, Vite, Bootstrap, and other tidbits as an exercise in front-end JS development and a bolster to my portfolio.
 
-## Recommended IDE Setup
+## Outline
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+-   Main page
+-   About me
+-   Web design projects
+-   Graphic design projects
+-   Side projects (music, game development, etc)
+-   Contact me
+-   Website credits (technology used, licensing, links to repositories, etc)
 
-## Customize configuration
+## Tech used
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+-   Vue 3
+-   Vite
+-   Bootstrap 5
 
-## Project Setup
+## Licensing
 
-```sh
-npm install
-```
+While I obviously own the intellectual property in the portfolio content, the overall project is under MIT licensing for editing and dissection if you wish to make your own personal site or app in Vue. No shame in a good reference!
 
-### Compile and Hot-Reload for Development
+## Special thanks
 
-```sh
-npm run dev
-```
+My parents, Nate, Craig, Mike, Donovan, Alona, Lyss, Erik, Garr (real), Max, Shae, Ely, Elly (different one), Ivy, Karmin, Roary, Mitch, Anne/Noah, Jon, Will, Titus, Kai, Oli, and an absolutely absurd amount more.
 
-### Compile and Minify for Production
+Sean & Jess, for being gracious hosts and giving me the motivation to seek new horizons.
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+RIP Amber. Say hello to Nitrous for me. <3
