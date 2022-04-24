@@ -1,16 +1,22 @@
-@import "Basier"; //? default font
+@import "@/assets/fonts/Basier/Basier"; //? default font
 
-$font-family-sans-serif: Basier, Helvetica, Arial, sans-serif;
-$font-family-monospace: BasierMono, Courier, monospace;
-$font-size-root: 16px;
-$headings-font-weight: 700;
-$h1-font-size: 5.653rem;
-$h2-font-size: 3.998rem;
-$h3-font-size: 2.827rem;
-$h4-font-size: 1.999rem;
-$h5-font-size: 1.414rem;
-$h6-font-size: 1rem;
+@import "bootstrap/scss/functions";
+@import "variables"; // BS5 overrides
 
-//! no bootstrap overrides beyond this point!
-@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/utilities";
+
+@import "custom"; // custom scss
