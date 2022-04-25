@@ -1,42 +1,50 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { ref } from "vue";
+import { RouterView } from "vue-router";
 import "bootstrap/js/dist/collapse";
+
+import Navbar from "./components/Navbar.vue";
+import Button from "./components/Button.vue";
+import Social from "./components/Social.vue";
+
+const socials = ref([
+	{
+		icon: "linkedin",
+		url: "https://www.linkedin.com/in/benjamin-diamond-315122ba/",
+	},
+	{
+		icon: "github",
+		url: "https://github.com/ApplianceJohn",
+	},
+	{
+		icon: "codepen",
+		url: "https://codepen.io/rinsethewax",
+	},
+]);
 </script>
 
 <template>
-	<header class="container">
-		<nav class="navbar navbar-expand-lg">
-			<a href="/" class="navbar-brand">
-				<img
-					id="logo"
-					src="@/assets/images/Diamond_Type_Icon.svg"
-					alt="Ben Diamond"
+	<header class="bg-light">
+		<div class="container">
+			<Navbar
+				><RouterLink to="/" class="nav-link">Home</RouterLink>
+				<RouterLink to="/about" class="nav-link">About</RouterLink>
+				<RouterLink to="/portfolio" class="nav-link"
+					>Portfolio</RouterLink
+				>
+				<Button title="Contact Me" url="/contact" />
+				<Social
+					v-for="link in socials"
+					:icon="link.icon"
+					:url="link.url"
 				/>
-			</a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#header-nav"
-				aria-controls="headerNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				Menu
-			</button>
-			<div class="collapse navbar-collapse" id="header-nav">
-				<div class="navbar-nav">
-					<RouterLink to="/" class="nav-link">Home</RouterLink>
-					<RouterLink to="/about" class="nav-link">About</RouterLink>
-					<RouterLink to="/portfolio" class="nav-link"
-						>Portfolio</RouterLink
-					>
-				</div>
-			</div>
-		</nav>
+			</Navbar>
+		</div>
 	</header>
-	<main class="container">
-		<RouterView />
+	<main>
+		<div class="container">
+			<RouterView />
+		</div>
 	</main>
 </template>
 

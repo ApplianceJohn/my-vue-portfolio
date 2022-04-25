@@ -17,6 +17,9 @@ A project utilizing Vue, Vite, Bootstrap, and other tidbits as an exercise in fr
 -   Vue 3
 -   Vite
 -   Bootstrap 5
+-   Sass (SCSS)
+-   ESLint
+-   Prettier
 
 ## Licensing
 
@@ -24,7 +27,7 @@ While I obviously own the intellectual property in the portfolio content, the ov
 
 ## Special thanks
 
-My parents, Nate, Craig, Mike, Donovan, Alona, Lyss, Erik, Garr (real), Max, Shae, Ely, Elly (different one), Ivy, Karmin, Roary, Mitch, Anne/Noah, Jon, Will, Titus, Kai, Oli, and an absolutely absurd amount more.
+My parents, Nate, Craig, Mike, Donovan, Alona, Lyss, Anne/Noah, Erik, Garr (real), Max, Shae, Ely, Elly (different one), Ivy, Karmin, Roary, Mitch, Jon, Will, Titus, Kai, Oli, and an absolutely absurd amount more.
 
 Sean & Jess, for being gracious hosts and giving me the motivation to seek new horizons.
 
