@@ -1,7 +1,9 @@
 <template>
-	<div class="home">
-		<h1>Designer. Developer. <span id="etcetera">Etcetera.</span></h1>
-		<p>
+	<div id="home" class="row">
+		<h1 class="text-center">
+			Designer. Developer.<br /><span id="etcetera">Etcetera.</span>
+		</h1>
+		<p class="text-center">
 			If you need it, I've probably done it; and if I haven't, I'd love to
 			learn.
 		</p>
@@ -10,6 +12,11 @@
 
 <style>
 #etcetera {
-	color: red;
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: url("/images/etcetera-mask.png");
+	background-position: center;
+	background-size: cover;
 }
 </style>

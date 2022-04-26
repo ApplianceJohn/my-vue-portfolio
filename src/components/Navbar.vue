@@ -1,15 +1,34 @@
 <script setup>
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
+import "bootstrap/js/dist/collapse";
+
+import Button from "./Button.vue";
+import Social from "./Social.vue";
+
+const socials = ref([
+	{
+		icon: "linkedin",
+		color: "#0072b1",
+		url: "https://www.linkedin.com/in/benjamin-diamond-315122ba/",
+	},
+	{
+		icon: "github",
+		color: "#222",
+		url: "https://github.com/ApplianceJohn",
+	},
+	{
+		icon: "codepen",
+		color: "#222",
+		url: "https://codepen.io/rinsethewax",
+	},
+]);
 </script>
 
 <template>
-	<nav class="navbar sticky-top navbar-light navbar-expand-lg">
+	<nav class="navbar navbar-light navbar-expand-lg sticky-top">
 		<a href="/" class="navbar-brand">
-			<img
-				id="logo"
-				src="@/assets/images/logo/Diamond_Type_Icon.svg"
-				alt="Ben Diamond"
-			/>
+			<img id="logo" src="/images/logo.svg" alt="Ben Diamond" />
 		</a>
 		<button
 			class="navbar-toggler"
@@ -19,12 +38,21 @@ import { RouterLink } from "vue-router";
 			aria-controls="headerNav"
 			aria-expanded="false"
 			aria-label="Toggle navigation"
-		>
-			<img src="./assets/icons/bars.svg" width="28" height="32" />
-		</button>
+		></button>
 		<div class="collapse navbar-collapse" id="header-nav">
 			<div class="navbar-nav">
-				<slot />
+				<RouterLink to="/" class="nav-link">Home</RouterLink>
+				<RouterLink to="/about" class="nav-link">About</RouterLink>
+				<RouterLink to="/portfolio" class="nav-link"
+					>Portfolio</RouterLink
+				>
+				<Button title="Contact Me" url="/contact" />
+				<Social
+					v-for="link in socials"
+					:icon="link.icon"
+					:color="link.color"
+					:url="link.url"
+				/>
 			</div>
 		</div>
 	</nav>

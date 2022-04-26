@@ -1,6 +1,5 @@
 <script setup>
-import { computed } from "vue";
-defineProps(["icon", "url"]);
+defineProps(["icon", "color", "url"]);
 </script>
 
 <template>
@@ -9,10 +8,15 @@ defineProps(["icon", "url"]);
 	></a>
 </template>
 
-<style>
+<style scoped>
 .social-link svg {
 	margin-left: 12px;
 	width: 24px;
 	height: 24px;
+	color: v-bind(color);
+}
+
+.social-link:hover svg {
+	opacity: 0.8;
 }
 </style>
