@@ -11,11 +11,11 @@ import Navbar from "./components/Navbar.vue";
 			<Navbar />
 		</div>
 	</header>
-	<main class="container-md">
+	<main class="container-md mt-3">
 		<RouterView />
 	</main>
 </template>
 
-<style lang="sass">
-@import "/public/styles/global.scss"
+<style lang="scss">
+@import "/public/styles/global.scss";
 </style>

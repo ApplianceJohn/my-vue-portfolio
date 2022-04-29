@@ -1,9 +1,7 @@
 <template>
 	<div id="home" class="row">
-		<h1 class="text-center">
-			Designer. Developer.<br /><span id="etcetera">Etcetera.</span>
-		</h1>
-		<p class="text-center">
+		<h1>Designer. Developer.<br /><span id="etcetera">Etcetera.</span></h1>
+		<p>
 			If you need it, I've probably done it; and if I haven't, I'd love to
 			learn.
 		</p>

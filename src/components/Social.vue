@@ -8,15 +8,19 @@ defineProps(["icon", "color", "url"]);
 	></a>
 </template>
 
-<style scoped>
-.social-link svg {
-	margin-left: 12px;
-	width: 24px;
-	height: 24px;
-	color: v-bind(color);
+<style scoped lang="scss">
+.social-link {
+	svg {
+		margin-right: 12px;
+		width: 24px;
+		height: 24px;
+		color: v-bind(color);
+	}
 }
 
-.social-link:hover svg {
-	opacity: 0.8;
+.social-link:hover {
+	svg {
+		opacity: 0.8;
+	}
 }
 </style>
