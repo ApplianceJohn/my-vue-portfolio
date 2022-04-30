@@ -2,17 +2,19 @@
 import { RouterView } from "vue-router";
 import "bootstrap/js/dist/collapse";
 
-import Navbar from "./components/Navbar.vue";
+import Navbar from "@/components/Navbar.vue";
 </script>
 
 <template>
 	<header class="bg-white">
-		<div class="container-md">
+		<div class="container">
 			<Navbar />
 		</div>
 	</header>
-	<main class="container-md mt-3">
-		<RouterView />
+	<main class="mt-3">
+		<div class="container">
+			<RouterView />
+		</div>
 	</main>
 </template>
 

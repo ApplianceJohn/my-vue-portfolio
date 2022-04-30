@@ -2,3 +2,18 @@
 	width: 100%;
 	height: 70px;
 }
+
+.gradient-fill {
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: url("/images/etcetera-mask.png");
+	background-position: center;
+	background-size: cover;
+}
+
+p {
+	font-family: BasierMono, Arial, Helvetica, sans-serif;
+	font-size: $h4-font-size;
+	line-height: $line-height-base;
+}

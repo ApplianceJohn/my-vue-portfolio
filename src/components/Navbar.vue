@@ -29,7 +29,11 @@ const socials = ref([
 	<nav class="navbar navbar-light navbar-expand-lg sticky-top">
 		<div class="container">
 			<a href="/" class="navbar-brand">
-				<img id="logo" src="/images/logo.svg" alt="Ben Diamond" />
+				<img
+					id="logo"
+					src="/icons/favicon.svg"
+					alt="Ben Diamond logo"
+				/>
 			</a>
 			<button
 				class="navbar-toggler ms-3"
