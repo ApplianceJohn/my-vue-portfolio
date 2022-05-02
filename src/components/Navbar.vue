@@ -27,7 +27,7 @@ const socials = ref([
 <template>
 	<nav class="navbar navbar-light navbar-expand-lg sticky-top">
 		<div class="container">
-			<a href="/" class="navbar-brand">
+			<a href="#home" class="navbar-brand">
 				<img
 					id="logo"
 					src="/icons/favicon.svg"
