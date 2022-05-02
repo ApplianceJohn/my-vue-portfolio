@@ -5,7 +5,7 @@ import PortfolioCard from "@/components/PortfolioCard.vue";
 <template>
 	<div class="row gx-3 gy-4">
 		<div class="col-md-6">
-			<h1>A <span class="gradient-fill">selection</span> of my work.</h1>
+			<h2>A <span class="gradient-fill">selection</span> of my work.</h2>
 		</div>
 		<div class="col-md-6">
 			<div class="row row-cols-1 gx-3 gy-4">

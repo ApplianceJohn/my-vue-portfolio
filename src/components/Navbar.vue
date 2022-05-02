@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
 import "bootstrap/js/dist/collapse";
 
 import Button from "./Button.vue";
@@ -49,22 +48,16 @@ const socials = ref([
 			<div class="collapse navbar-collapse" id="header-nav">
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item">
-						<RouterLink to="/" class="nav-link">Home</RouterLink>
+						<a href="#home" class="nav-link">Home</a>
 					</li>
 					<li class="nav-item">
-						<RouterLink to="/about" class="nav-link"
-							>About</RouterLink
-						>
+						<a href="#about" class="nav-link">About</a>
 					</li>
 					<li class="nav-item">
-						<RouterLink to="/portfolio" class="nav-link"
-							>Portfolio</RouterLink
-						>
+						<a href="#portfolio" class="nav-link">Portfolio</a>
 					</li>
 					<li class="nav-item">
-						<RouterLink to="/contact" class="nav-link"
-							>Contact Me</RouterLink
-						>
+						<a href="#contact" class="nav-link">Contact Me</a>
 					</li>
 				</ul>
 				<div class="mt-2">

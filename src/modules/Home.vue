@@ -5,7 +5,7 @@
 				>Etcetera.</span
 			>
 		</h1>
-		<p>
+		<p class="fs-4">
 			If you need it, I've probably done it;<br />and if I haven't, I'd
 			love to learn.
 		</p>

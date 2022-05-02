@@ -1,7 +1,7 @@
 <template>
 	<div class="row">
 		<div class="col-md-5">
-			<h1>What's all <span class="gradient-fill">this</span>, then?</h1>
+			<h2>What's all <span class="gradient-fill">this</span>, then?</h2>
 		</div>
 		<div class="col-md-7">
 			<p>
