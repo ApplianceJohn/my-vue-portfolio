@@ -1,7 +1,12 @@
 @import "/public/fonts/Basier/Basier"; //? default font
 
 @import "variables"; //? BS5 overrides
-@import "grid";
+@import "bootstrap/scss/bootstrap";
+@import "custom"; // custom scss
+
+//! custom resource declarations
+//TODO figure out optimal imports
+/* @import "bootstrap/scss/bootstrap-grid";
 
 // mixin imports
 @import "bootstrap/scss/mixins/border-radius";
@@ -21,6 +26,4 @@
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
 @import "bootstrap/scss/transitions";
-@import "bootstrap/scss/type";
-
-@import "custom"; // custom scss
+@import "bootstrap/scss/type"; */
