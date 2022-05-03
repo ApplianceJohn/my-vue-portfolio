@@ -2,7 +2,6 @@
 import { ref } from "vue";
 import "bootstrap/js/dist/collapse";
 
-import Button from "./Button.vue";
 import Social from "./Social.vue";
 
 const socials = ref([
@@ -25,7 +24,7 @@ const socials = ref([
 </script>
 
 <template>
-	<nav class="navbar navbar-light navbar-expand-lg sticky-top">
+	<nav ref="navbar" class="navbar navbar-light">
 		<div class="container">
 			<a href="#home" class="navbar-brand">
 				<img
@@ -46,7 +45,7 @@ const socials = ref([
 				<FontAwesomeIcon :icon="['fal', 'bars']"></FontAwesomeIcon>
 			</button>
 			<div class="collapse navbar-collapse" id="header-nav">
-				<ul class="navbar-nav mx-auto">
+				<ul class="navbar-nav mx-auto mb-2">
 					<li class="nav-item">
 						<a href="#home" class="nav-link">Home</a>
 					</li>
@@ -60,7 +59,7 @@ const socials = ref([
 						<a href="#contact" class="nav-link">Contact Me</a>
 					</li>
 				</ul>
-				<div class="mt-2">
+				<div>
 					<Social
 						v-for="link in socials"
 						:icon="link.icon"
@@ -72,3 +71,10 @@ const socials = ref([
 		</div>
 	</nav>
 </template>
+
+<style>
+#logo {
+	width: 100%;
+	height: 60px;
+}
+</style>

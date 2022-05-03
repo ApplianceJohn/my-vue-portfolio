@@ -1,36 +1,43 @@
 <script setup>
+import { ref, onMounted } from "vue";
+
 import "bootstrap/js/dist/collapse";
 
 import Navbar from "./components/Navbar.vue";
-import Wrapper from "./components/Wrapper.vue";
 
 import Home from "./modules/Home.vue";
 import About from "./modules/About.vue";
 import Portfolio from "./modules/Portfolio.vue";
 import ContactMe from "./modules/ContactMe.vue";
+
+const navbar = ref(null);
+
+onMounted(() => {
+	console.log(navbar.value);
+});
 </script>
 
 <template>
-	<header class="bg-white">
-		<Navbar />
+	<header class="bg-light">
+		<Navbar ref="navbar" />
 	</header>
-	<main class="mt-3">
-		<div class="container-fluid px-0">
-			<Wrapper name="home"><Home /></Wrapper>
-			<div class="bg-dark py-3">
-				<Wrapper name="about"><About /></Wrapper>
-				<Wrapper name="portfolio"><Portfolio /></Wrapper>
-				<Wrapper name="contact"><ContactMe /></Wrapper>
-			</div>
+	<main>
+		<div class="container-fluid py-3">
+			<Home :navbar="navbar" />
+		</div>
+		<div class="container-fluid py-3 bg-dark">
+			<About />
+			<Portfolio />
+		</div>
+		<div class="container-fluid py-3">
+			<ContactMe />
 		</div>
 	</main>
 	<footer class="bg-dark">
 		<div class="container">
-			<div class="row py-3">
+			<div class="row">
 				<div class="col">
-					<p class="text-light text-center mb-0">
-						&copy;2022 Ben Diamond
-					</p>
+					<p class="text-light text-center">&copy;2022 Ben Diamond</p>
 				</div>
 			</div>
 		</div>
@@ -39,4 +46,13 @@ import ContactMe from "./modules/ContactMe.vue";
 
 <style lang="scss">
 @import "/public/styles/global.scss";
+
+.gradient-fill {
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: url("/images/etcetera-mask.png");
+	background-position: center;
+	background-size: cover;
+}
 </style>

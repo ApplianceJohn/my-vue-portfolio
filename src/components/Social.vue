@@ -3,7 +3,7 @@ defineProps(["icon", "color", "url"]);
 </script>
 
 <template>
-	<a :href="url" target="_blank" rel="noopener" :id="site" class="social-link"
+	<a :href="url" target="_blank" rel="noopener" :id="icon" class="social-link"
 		><FontAwesomeIcon :icon="['fab', icon]"></FontAwesomeIcon
 	></a>
 </template>

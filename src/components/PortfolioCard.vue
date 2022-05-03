@@ -1,5 +1,6 @@
 <script setup>
 import Button from "./Button.vue";
+
 defineProps({
 	title: {
 		type: String,
@@ -11,6 +12,12 @@ defineProps({
 		type: String,
 		default() {
 			return "A brief project description.";
+		},
+	},
+	image: {
+		type: String,
+		default() {
+			return "https://via.placeholder.com/450x279.png?text=Portfolio+preview+image";
 		},
 	},
 	url: {
@@ -31,10 +38,7 @@ defineProps({
 <template>
 	<div class="col">
 		<div class="card">
-			<img
-				src="https://via.placeholder.com/450x279.png?text=Portfolio+preview+image"
-				class="card-img-top"
-			/>
+			<img :src="image" class="card-img-top" />
 			<div class="card-body">
 				<h3 class="card-title h4">{{ title }}</h3>
 				<p class="card-text">
