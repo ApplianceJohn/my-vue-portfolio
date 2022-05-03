@@ -1,46 +1,36 @@
 <script setup>
-import { ref, onMounted } from "vue";
-
 import "bootstrap/js/dist/collapse";
 
 import Navbar from "./components/Navbar.vue";
+import Wrapper from "./components/Wrapper.vue";
 
 import Home from "./modules/Home.vue";
 import About from "./modules/About.vue";
 import Portfolio from "./modules/Portfolio.vue";
 import ContactMe from "./modules/ContactMe.vue";
-
-const navbar = ref(null);
-
-onMounted(() => {
-	console.log(navbar.value);
-});
+import Footer from "./modules/Footer.vue";
 </script>
 
 <template>
-	<header class="bg-light">
-		<Navbar ref="navbar" />
+	<header>
+		<Navbar />
+		<Wrapper>
+			<Home />
+		</Wrapper>
 	</header>
 	<main>
-		<div class="container-fluid py-3">
-			<Home :navbar="navbar" />
-		</div>
-		<div class="container-fluid py-3 bg-dark">
+		<Wrapper class="bg-dark">
 			<About />
 			<Portfolio />
-		</div>
-		<div class="container-fluid py-3">
+		</Wrapper>
+		<Wrapper>
 			<ContactMe />
-		</div>
+		</Wrapper>
 	</main>
-	<footer class="bg-dark">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<p class="text-light text-center">&copy;2022 Ben Diamond</p>
-				</div>
-			</div>
-		</div>
+	<footer>
+		<Wrapper class="bg-dark">
+			<Footer />
+		</Wrapper>
 	</footer>
 </template>
 
@@ -53,6 +43,6 @@ onMounted(() => {
 	background-clip: text;
 	background-image: url("/images/etcetera-mask.png");
 	background-position: center;
-	background-size: cover;
+	background-size: 150%;
 }
 </style>

@@ -1,11 +1,7 @@
-<script setup>
-defineProps(["name"]);
-</script>
-
 <template>
-	<div :id="name" class="wrapper row align-items-center">
-		<slot></slot>
+	<div class="wrapper py-3">
+		<div class="container">
+			<slot></slot>
+		</div>
 	</div>
 </template>
-
-<style lang="scss"></style>

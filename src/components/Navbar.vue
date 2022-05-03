@@ -24,7 +24,7 @@ const socials = ref([
 </script>
 
 <template>
-	<nav ref="navbar" class="navbar navbar-light">
+	<nav ref="navbar" class="navbar navbar-expand-lg navbar-light bg-white">
 		<div class="container">
 			<a href="#home" class="navbar-brand">
 				<img
@@ -45,7 +45,7 @@ const socials = ref([
 				<FontAwesomeIcon :icon="['fal', 'bars']"></FontAwesomeIcon>
 			</button>
 			<div class="collapse navbar-collapse" id="header-nav">
-				<ul class="navbar-nav mx-auto mb-2">
+				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 					<li class="nav-item">
 						<a href="#home" class="nav-link">Home</a>
 					</li>
