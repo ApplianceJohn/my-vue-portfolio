@@ -15,11 +15,13 @@ import ContactMe from "./modules/ContactMe.vue";
 		<Navbar />
 	</header>
 	<main class="mt-3">
-		<div class="container">
+		<div class="container-fluid px-0">
 			<Wrapper name="home"><Home /></Wrapper>
-			<Wrapper name="about"><About /></Wrapper>
-			<Wrapper name="portfolio"><Portfolio /></Wrapper>
-			<Wrapper name="contact"><ContactMe /></Wrapper>
+			<div class="bg-dark py-3">
+				<Wrapper name="about"><About /></Wrapper>
+				<Wrapper name="portfolio"><Portfolio /></Wrapper>
+				<Wrapper name="contact"><ContactMe /></Wrapper>
+			</div>
 		</div>
 	</main>
 	<footer class="bg-dark">

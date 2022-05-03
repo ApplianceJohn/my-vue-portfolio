@@ -20,7 +20,9 @@
 	min-height: 600px;
 	height: 70vh;
 	background-image: url("/images/wireframe-dsktp/wireframe-dsktp.png");
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right center;
 
 	.content {
 		position: relative;
