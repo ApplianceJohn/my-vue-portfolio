@@ -1,9 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
 import "bootstrap/js/dist/collapse";
 
-import Button from "./Button.vue";
 import Social from "./Social.vue";
 
 const socials = ref([
@@ -26,9 +24,9 @@ const socials = ref([
 </script>
 
 <template>
-	<nav class="navbar navbar-light navbar-expand-lg sticky-top">
+	<nav ref="navbar" class="navbar navbar-expand-lg navbar-light bg-white">
 		<div class="container">
-			<a href="/" class="navbar-brand">
+			<a href="#home" class="navbar-brand">
 				<img
 					id="logo"
 					src="/icons/favicon.svg"
@@ -47,27 +45,21 @@ const socials = ref([
 				<FontAwesomeIcon :icon="['fal', 'bars']"></FontAwesomeIcon>
 			</button>
 			<div class="collapse navbar-collapse" id="header-nav">
-				<ul class="navbar-nav mx-auto">
+				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<RouterLink to="/" class="nav-link">Home</RouterLink>
+						<a href="#home" class="nav-link">Home</a>
 					</li>
 					<li class="nav-item">
-						<RouterLink to="/about" class="nav-link"
-							>About</RouterLink
-						>
+						<a href="#about" class="nav-link">About</a>
 					</li>
 					<li class="nav-item">
-						<RouterLink to="/portfolio" class="nav-link"
-							>Portfolio</RouterLink
-						>
+						<a href="#portfolio" class="nav-link">Portfolio</a>
 					</li>
 					<li class="nav-item">
-						<RouterLink to="/contact" class="nav-link"
-							>Contact Me</RouterLink
-						>
+						<a href="#contact" class="nav-link">Contact Me</a>
 					</li>
 				</ul>
-				<div class="mt-2">
+				<div>
 					<Social
 						v-for="link in socials"
 						:icon="link.icon"
@@ -79,3 +71,10 @@ const socials = ref([
 		</div>
 	</nav>
 </template>
+
+<style>
+#logo {
+	width: 100%;
+	height: 60px;
+}
+</style>

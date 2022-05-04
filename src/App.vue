@@ -1,23 +1,48 @@
 <script setup>
-import { RouterView } from "vue-router";
 import "bootstrap/js/dist/collapse";
 
-import Navbar from "@/components/Navbar.vue";
+import Navbar from "./components/Navbar.vue";
+import Wrapper from "./components/Wrapper.vue";
+
+import Home from "./modules/Home.vue";
+import About from "./modules/About.vue";
+import Portfolio from "./modules/Portfolio.vue";
+import ContactMe from "./modules/ContactMe.vue";
+import Footer from "./modules/Footer.vue";
 </script>
 
 <template>
-	<header class="bg-white">
-		<div class="container">
-			<Navbar />
-		</div>
+	<header>
+		<Navbar />
+		<Wrapper>
+			<Home />
+		</Wrapper>
 	</header>
-	<main class="mt-3">
-		<div class="container">
-			<RouterView />
-		</div>
+	<main>
+		<Wrapper class="bg-dark">
+			<About />
+			<Portfolio />
+		</Wrapper>
+		<Wrapper>
+			<ContactMe />
+		</Wrapper>
 	</main>
+	<footer>
+		<Wrapper class="bg-dark">
+			<Footer />
+		</Wrapper>
+	</footer>
 </template>
 
 <style lang="scss">
 @import "/public/styles/global.scss";
+
+.gradient-fill {
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: url("/images/etcetera-mask.png");
+	background-position: center;
+	background-size: 150%;
+}
 </style>
