@@ -5,7 +5,7 @@
 				>Etcetera.</span
 			>
 		</h1>
-		<p>
+		<p class="fs-5">
 			If you need it, I've probably done it;<br />and if I haven't, I'd
 			love to learn.
 		</p>
@@ -14,6 +14,8 @@
 
 <style lang="scss">
 #home-content {
-	height: calc(100vh - 120px);
+	position: relative;
+	z-index: 1;
+	min-height: calc(100vh - 120px);
 }
 </style>

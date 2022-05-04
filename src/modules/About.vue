@@ -1,5 +1,5 @@
 <template>
-	<div class="row py-4 gy-2">
+	<div class="row align-items-center py-4 gy-2">
 		<div class="col-md-4">
 			<h2 class="text-light">
 				What's all <span class="gradient-fill">this</span>, then?

@@ -1,10 +1,9 @@
 <script setup>
-import { ref } from "vue";
 import "bootstrap/js/dist/collapse";
 
 import Social from "./Social.vue";
 
-const socials = ref([
+const socials = [
 	{
 		icon: "linkedin",
 		color: "#0072b1",
@@ -20,16 +19,26 @@ const socials = ref([
 		color: "#222",
 		url: "https://codepen.io/rinsethewax",
 	},
-]);
+];
 </script>
 
 <template>
-	<nav ref="navbar" class="navbar navbar-expand-lg navbar-light bg-white">
+	<nav
+		ref="navbar"
+		class="navbar navbar-expand-lg navbar-light bg-transparent"
+	>
 		<div class="container">
 			<a href="#home" class="navbar-brand">
 				<img
 					id="logo"
+					class="d-lg-none"
 					src="/icons/favicon.svg"
+					alt="Ben Diamond logo"
+				/>
+				<img
+					id="logo"
+					class="d-none d-lg-inline-block"
+					src="/images/logo.svg"
 					alt="Ben Diamond logo"
 				/>
 			</a>
