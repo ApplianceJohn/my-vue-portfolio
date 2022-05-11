@@ -1,6 +1,6 @@
 {
 	"name": "singlepage-portfolio",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"scripts": {
 		"build": "vite build",
 		"dev": "vite",
@@ -9,6 +9,7 @@
 		"preview": "vite preview --port 5050"
 	},
 	"dependencies": {
+		"@emailjs/browser": "^3.6.2",
 		"@fortawesome/fontawesome-svg-core": "^6.1.1",
 		"@fortawesome/free-brands-svg-icons": "^6.1.1",
 		"@fortawesome/pro-light-svg-icons": "^6.1.1",
