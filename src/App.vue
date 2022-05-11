@@ -1,7 +1,10 @@
 <script setup>
 import "bootstrap/js/dist/collapse";
 
+import { RouterView } from "vue-router";
+
 import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 import Wrapper from "./components/Wrapper.vue";
 </script>
 
@@ -12,7 +15,7 @@ import Wrapper from "./components/Wrapper.vue";
 		</Wrapper>
 	</header>
 	<main>
-		<!--Router content goes here-->
+		<RouterView />
 	</main>
 	<footer>
 		<Wrapper class="bg-dark">

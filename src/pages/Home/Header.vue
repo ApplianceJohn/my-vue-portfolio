@@ -1,5 +1,5 @@
 <template>
-	<div id="home-content" class="row align-content-center">
+	<div class="row align-content-center">
 		<h1>
 			Designer. Developer.<br /><span class="gradient-fill"
 				>Etcetera.</span
@@ -11,11 +11,3 @@
 		</p>
 	</div>
 </template>
-
-<style lang="scss">
-#home-content {
-	position: relative;
-	z-index: 1;
-	min-height: calc(100vh - 120px);
-}
-</style>

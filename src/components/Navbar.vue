@@ -1,6 +1,8 @@
 <script setup>
 import "bootstrap/js/dist/collapse";
 
+import { RouterLink } from "vue-router";
+
 import Social from "./Social.vue";
 
 const socials = [
@@ -28,7 +30,7 @@ const socials = [
 		class="navbar navbar-expand-lg navbar-light bg-transparent"
 	>
 		<div class="container">
-			<a href="#home" class="navbar-brand">
+			<RouterLink to="/" class="navbar-brand">
 				<img
 					id="logo"
 					class="d-lg-none"
@@ -41,7 +43,7 @@ const socials = [
 					src="/images/logo.svg"
 					alt="Ben Diamond logo"
 				/>
-			</a>
+			</RouterLink>
 			<button
 				class="navbar-toggler ms-3"
 				type="button"
@@ -56,13 +58,15 @@ const socials = [
 			<div class="collapse navbar-collapse" id="header-nav">
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a href="#home" class="nav-link">Home</a>
+						<RouterLink to="/" class="nav-link">Home</RouterLink>
 					</li>
 					<li class="nav-item">
 						<a href="#about" class="nav-link">About</a>
 					</li>
 					<li class="nav-item">
-						<a href="#portfolio" class="nav-link">Portfolio</a>
+						<RouterLink to="/portfolio" class="nav-link"
+							>Portfolio</RouterLink
+						>
 					</li>
 					<li class="nav-item">
 						<a href="#contact" class="nav-link">Contact Me</a>
