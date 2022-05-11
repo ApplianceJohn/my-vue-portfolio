@@ -10,7 +10,7 @@ import Wrapper from "./components/Wrapper.vue";
 
 <template>
 	<header>
-		<Wrapper>
+		<Wrapper id="navbar">
 			<Navbar />
 		</Wrapper>
 	</header>
@@ -26,6 +26,11 @@ import Wrapper from "./components/Wrapper.vue";
 
 <style lang="scss">
 @import "/public/styles/global.scss";
+
+#navbar {
+	position: relative;
+	z-index: 1000;
+}
 
 .gradient-fill {
 	color: transparent;

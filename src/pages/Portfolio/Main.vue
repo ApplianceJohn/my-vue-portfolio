@@ -1,9 +1,16 @@
 <script setup>
 import Wrapper from "@/components/Wrapper.vue";
+import Marquee from "@/components/Marquee.vue";
+
+const marquee = {
+	title: "My work, from the web and <span class='gradient-fill'>beyond.</span>",
+	subtitle: "Graphic, programmatic, funkadelic.",
+	bgImage: "/images/wireframe-dsktp.png",
+};
 </script>
 
 <template>
 	<Wrapper>
-		<h1>This is portfolio content!</h1>
+		<Marquee v-bind="marquee" />
 	</Wrapper>
 </template>
