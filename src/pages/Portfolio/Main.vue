@@ -5,7 +5,7 @@ import Marquee from "@/components/Marquee.vue";
 const marquee = {
 	title: "My work, from the web and <span class='gradient-fill'>beyond.</span>",
 	subtitle: "Graphic, programmatic, funkadelic.",
-	bgImage: "/images/wireframe-dsktp.png",
+	bgImage: "/images/portfolio-bg.png",
 };
 </script>
 

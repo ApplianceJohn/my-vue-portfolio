@@ -3,15 +3,16 @@ const props = defineProps(["title", "subtitle", "bgImage"]);
 </script>
 
 <template>
-	<div class="content row align-content-start">
+	<div class="content row align-content-center">
 		<div class="inner-content">
 			<h1 v-html="props.title"></h1>
 			<p class="fs-5" v-html="props.subtitle"></p>
 		</div>
-		<img
-			:src="props.bgImage"
-			class="position-absolute bottom-0 end-0 col-md-9 col-xl-6 opacity-25"
-		/>
+		<div
+			class="position-absolute bottom-0 end-0 mh-100 col-md-9 col-xl-6 text-center opacity-25"
+		>
+			<img :src="props.bgImage" class="img-fluid" />
+		</div>
 	</div>
 </template>
 
@@ -22,6 +23,6 @@ const props = defineProps(["title", "subtitle", "bgImage"]);
 
 .inner-content {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 </style>

@@ -34,13 +34,13 @@ const socials = [
 				<img
 					id="logo"
 					class="d-lg-none"
-					src="/icons/favicon.svg"
-					alt="Ben Diamond logo"
+					src="/images/Diamond-Icon.png"
+					alt="Ben Diamond icon"
 				/>
 				<img
 					id="logo"
-					class="d-none d-lg-inline-block"
-					src="/images/logo.svg"
+					class="d-none d-lg-inline-block img-fluid"
+					src="/images/Diamond-Logo.png"
 					alt="Ben Diamond logo"
 				/>
 			</RouterLink>
