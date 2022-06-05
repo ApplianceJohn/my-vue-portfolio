@@ -1,31 +1,21 @@
 <script setup>
 import "bootstrap/js/dist/collapse";
 
-import Navbar from "./components/Navbar.vue";
-import Wrapper from "./components/Wrapper.vue";
+import { RouterView } from "vue-router";
 
-import Home from "./modules/Home.vue";
-import About from "./modules/About.vue";
-import Portfolio from "./modules/Portfolio.vue";
-import ContactMe from "./modules/ContactMe.vue";
-import Footer from "./modules/Footer.vue";
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+import Wrapper from "./components/Wrapper.vue";
 </script>
 
 <template>
-	<header id="desktop-bg">
-		<Navbar />
-		<Wrapper>
-			<Home />
+	<header>
+		<Wrapper id="navbar">
+			<Navbar />
 		</Wrapper>
 	</header>
 	<main>
-		<Wrapper class="bg-dark">
-			<About />
-			<Portfolio />
-		</Wrapper>
-		<Wrapper>
-			<ContactMe />
-		</Wrapper>
+		<RouterView />
 	</main>
 	<footer>
 		<Wrapper class="bg-dark">
@@ -37,24 +27,9 @@ import Footer from "./modules/Footer.vue";
 <style lang="scss">
 @import "/public/styles/global.scss";
 
-#desktop-bg {
+#navbar {
 	position: relative;
-	background-image: url("/images/wireframe-dsktp.png");
-	background-repeat: no-repeat;
-	background-size: 66%;
-	background-position: right 66%;
-
-	&::before {
-		content: "";
-		position: absolute;
-		z-index: 0;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: white;
-		opacity: 0.75;
-	}
+	z-index: 1000;
 }
 
 .gradient-fill {

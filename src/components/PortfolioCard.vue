@@ -40,7 +40,7 @@ defineProps({
 		<div class="card">
 			<img :src="image" class="card-img-top" />
 			<div class="card-body">
-				<h3 class="card-title h4">{{ title }}</h3>
+				<h3 class="card-title h5">{{ title }}</h3>
 				<p class="card-text">
 					{{ desc }}
 				</p>
