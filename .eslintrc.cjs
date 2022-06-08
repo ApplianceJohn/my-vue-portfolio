@@ -10,12 +10,16 @@ module.exports = {
 	],
 	env: {
 		"vue/setup-compiler-macros": true,
+		browser: true,
+		node: true,
 	},
-	"prettier/prettier": [
-		"error",
-		{},
-		{
-			usePrettierrc: true,
-		},
-	],
+	rules: {
+		"prettier/prettier": [
+			"error",
+			{},
+			{
+				usePrettierrc: true,
+			},
+		],
+	},
 };

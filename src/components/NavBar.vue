@@ -75,6 +75,7 @@ const socials = [
 				<div>
 					<Social
 						v-for="link in socials"
+						:key="link.url"
 						:icon="link.icon"
 						:color="link.color"
 						:url="link.url"
