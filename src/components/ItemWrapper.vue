@@ -1,6 +1,6 @@
 <template>
-	<div class="wrapper py-3">
-		<div class="container">
+	<div class="py-3">
+		<div class="container mx-auto">
 			<slot></slot>
 		</div>
 	</div>

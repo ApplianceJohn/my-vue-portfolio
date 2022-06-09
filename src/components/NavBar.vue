@@ -1,94 +1,91 @@
 <script setup>
-import "bootstrap/js/dist/collapse";
-
-import { RouterLink } from "vue-router";
-
-import Social from "./Social.vue";
-
-const socials = [
-	{
-		icon: "linkedin",
-		color: "#0072b1",
-		url: "https://www.linkedin.com/in/benjamin-diamond-315122ba/",
-	},
-	{
-		icon: "github",
-		color: "#222",
-		url: "https://github.com/ApplianceJohn",
-	},
-	{
-		icon: "codepen",
-		color: "#222",
-		url: "https://codepen.io/rinsethewax",
-	},
-];
+import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+import { MenuIcon, XIcon } from "@heroicons/vue/outline";
+import SocialLinks from "./SocialLinks.vue";
 </script>
 
 <template>
-	<nav
-		ref="navbar"
-		class="navbar navbar-expand-lg navbar-light bg-transparent"
-	>
-		<div class="container">
-			<RouterLink to="/" class="navbar-brand">
-				<img
-					id="logo"
-					class="d-lg-none"
-					src="/images/Diamond-Icon.png"
-					alt="Ben Diamond icon"
-				/>
-				<img
-					id="logo"
-					class="d-none d-lg-inline-block img-fluid"
-					src="/images/Diamond-Logo.png"
-					alt="Ben Diamond logo"
-				/>
-			</RouterLink>
-			<button
-				class="navbar-toggler ms-3"
-				type="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#header-nav"
-				aria-controls="headerNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<FontAwesomeIcon :icon="['fal', 'bars']"></FontAwesomeIcon>
-			</button>
-			<div class="collapse navbar-collapse" id="header-nav">
-				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<RouterLink to="/" class="nav-link">Home</RouterLink>
-					</li>
-					<li class="nav-item">
-						<a href="#about" class="nav-link">About</a>
-					</li>
-					<li class="nav-item">
-						<RouterLink to="/portfolio" class="nav-link"
-							>Portfolio</RouterLink
+	<nav class="flex justify-between items-center px-5">
+		<a href="#top" class="">
+			<img
+				class="lg:hidden"
+				src="@/assets/images/Diamond-Icon.png"
+				alt="Ben Diamond icon"
+			/>
+			<img
+				class="hidden lg:inline"
+				src="@/assets/images/Diamond-Logo.png"
+				alt="Ben Diamond logo"
+			/>
+		</a>
+		<div class="hidden lg:flex flex-grow justify-between items-center ml-8">
+			<ul class="flex flex-initial space-x-4">
+				<li>
+					<a href="#top" class="hover:text-accent-dark">Home</a>
+				</li>
+				<li>
+					<a href="#about" class="hover:text-accent-dark">About</a>
+				</li>
+				<li>
+					<a href="#portfolio" class="hover:text-accent-dark"
+						>Portfolio</a
+					>
+				</li>
+				<li>
+					<a href="#contact" class="hover:text-accent-dark"
+						>Contact Me</a
+					>
+				</li>
+			</ul>
+			<SocialLinks />
+		</div>
+		<div class="lg:hidden">
+			<Menu v-slot="{ open }">
+				<div class="flex flex-col justify-center items-end">
+					<MenuButton
+						><div
+							:class="
+								'w-12 p-2 border-2 rounded ' +
+								(open
+									? 'border-accent-dark'
+									: 'border-base-light')
+							"
 						>
-					</li>
-					<li class="nav-item">
-						<a href="#contact" class="nav-link">Contact Me</a>
-					</li>
-				</ul>
-				<div>
-					<Social
-						v-for="link in socials"
-						:key="link.url"
-						:icon="link.icon"
-						:color="link.color"
-						:url="link.url"
-					/>
+							<div :class="open ? 'hidden' : ''">
+								<MenuIcon class="text-base-dark" />
+							</div>
+							<div :class="open ? '' : 'hidden'">
+								<XIcon class="text-accent-dark" />
+							</div></div
+					></MenuButton>
+					<transition
+						enter-active-class="transition duration-100 ease-out"
+						enter-from-class="transform scale-95 opacity-0"
+						enter-to-class="transform scale-100 opacity-100"
+						leave-active-class="transition duration-75 ease-out"
+						leave-from-class="transform scale-100 opacity-100"
+						leave-to-class="transform scale-95 opacity-0"
+					>
+						<MenuItems
+							class="absolute top-20 flex flex-col w-40 p-5 border-2 border-accent-dark bg-highlight-light rounded"
+						>
+							<MenuItem>
+								<a href="#top" class="mb-5">Home</a>
+							</MenuItem>
+							<MenuItem>
+								<a href="#about" class="mb-5">About</a>
+							</MenuItem>
+							<MenuItem>
+								<a href="#portfolio" class="mb-5">Portfolio</a>
+							</MenuItem>
+							<MenuItem>
+								<a href="#contact" class="mb-5">Contact Me</a>
+							</MenuItem>
+							<SocialLinks />
+						</MenuItems>
+					</transition>
 				</div>
-			</div>
+			</Menu>
 		</div>
 	</nav>
 </template>
-
-<style>
-#logo {
-	width: 100%;
-	height: 60px;
-}
-</style>

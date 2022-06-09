@@ -1,43 +1,21 @@
 <script setup>
-import "bootstrap/js/dist/collapse";
-
-import { RouterView } from "vue-router";
-
-import Navbar from "./components/Navbar.vue";
-import Footer from "./components/Footer.vue";
-import Wrapper from "./components/Wrapper.vue";
+import NavBar from "./components/NavBar.vue";
+import FooterSection from "./components/FooterSection.vue";
+import ItemWrapper from "./components/ItemWrapper.vue";
 </script>
 
 <template>
 	<header>
-		<Wrapper id="navbar">
-			<Navbar />
-		</Wrapper>
+		<ItemWrapper class="bg-highlight-light">
+			<NavBar />
+		</ItemWrapper>
 	</header>
 	<main>
 		<RouterView />
 	</main>
 	<footer>
-		<Wrapper class="bg-dark">
-			<Footer />
-		</Wrapper>
+		<ItemWrapper class="bg-base-dark">
+			<FooterSection />
+		</ItemWrapper>
 	</footer>
 </template>
-
-<style lang="scss">
-@import "/public/styles/global.scss";
-
-#navbar {
-	position: relative;
-	z-index: 1000;
-}
-
-.gradient-fill {
-	color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;
-	background-image: url("/images/etcetera-mask.png");
-	background-position: center;
-	background-size: 150%;
-}
-</style>

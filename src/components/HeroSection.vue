@@ -15,14 +15,3 @@ const props = defineProps(["title", "subtitle", "bgImage"]);
 		</div>
 	</div>
 </template>
-
-<style lang="scss">
-.content {
-	min-height: calc(100vh - 120px);
-}
-
-.inner-content {
-	position: relative;
-	z-index: 2;
-}
-</style>
