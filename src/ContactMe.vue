@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import emailjs from "@emailjs/browser";
 
-import Alert from "@/components/Alert.vue";
+import AlertBox from "@/components/AlertBox.vue";
 
 let emailAuth = {
 	serviceID: "contact_service",
@@ -99,7 +99,7 @@ function sendEmail() {
 					/>
 				</div>
 				<div class="col">
-					<Alert
+					<AlertBox
 						:status="submissionStatus"
 						:messages="alertMessages"
 					/>

@@ -1,12 +1,10 @@
 <template>
-	<div class="row align-items-center py-4 gy-2">
-		<div class="col-md-4">
-			<h2 class="text-light">
+	<div class="bg-base-dark">
+		<div class="container columns-2 py-4 space-y-2">
+			<h2 class="text-highlight-light">
 				What's all <span class="gradient-fill">this</span>, then?
 			</h2>
-		</div>
-		<div class="col-md-8">
-			<p class="text-light">
+			<p class="text-highlight-light">
 				Ben Diamond is a middle-aged (between ages 20 and 30) web,
 				graphic, and print designer with a smattering of copywriting and
 				music production under his belt. He's worked as a professional

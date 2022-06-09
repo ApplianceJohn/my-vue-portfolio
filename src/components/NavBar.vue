@@ -27,8 +27,8 @@ import SocialLinks from "./SocialLinks.vue";
 					<a href="#about" class="hover:text-accent-dark">About</a>
 				</li>
 				<li>
-					<a href="#portfolio" class="hover:text-accent-dark"
-						>Portfolio</a
+					<a href="#projects" class="hover:text-accent-dark"
+						>Projects</a
 					>
 				</li>
 				<li>

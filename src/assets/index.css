@@ -8,19 +8,8 @@
 	h3,
 	h4,
 	h5,
-	h6,
-	p,
-	a {
-		@apply text-base-dark;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
 	h6 {
-		@apply font-extrabold;
+		@apply leading-tight font-extrabold;
 	}
 
 	h1 {
@@ -45,5 +34,16 @@
 
 	h6 {
 		@apply text-base;
+	}
+}
+
+@layer components {
+	.gradient-fill {
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-image: url("/images/etcetera-mask.png");
+		background-position: center;
+		background-size: 150%;
 	}
 }
